@@ -38,11 +38,8 @@ jobs:
         run: sudo rm -f $(which terraform) || true
 
       - name: Setup Terraform v1.6.3
-        uses: hashicorp/setup-terraform@v2
-        with:
-          terraform_version: 1.6.3
-          terraform_wrapper: false
-
+        uses: hashicorp/setup-terraform@v3
+        
       - name: Verify Terraform version
         run: terraform -version
 
